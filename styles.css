@@ -6,11 +6,13 @@ body {
     padding: 0;
 }
 
+/* Header */
 header {
     padding: 20px 0;
     text-align: center;
 }
 
+/* Wrapper */
 .wrapper {
     display: flex;
     justify-content: center;
@@ -18,6 +20,7 @@ header {
     height: 100vh;
 }
 
+/* Heading Styles */
 h1 {
     margin: 0;
     font-size: 50px;
@@ -46,11 +49,13 @@ h2 {
     }
 }
 
+/* Navigation */
 nav {
     margin-top: 20px;
     text-align: center;
 }
 
+/* Buttons */
 button {
     background-color: silver;
     color: black;
@@ -67,18 +72,16 @@ button:hover {
     background-color: #c0c0c0;
 }
 
+/* Image */
 img {
     margin-top: 20px;
     width: 250px;
-    /* Set the width to your desired size */
     height: 250px;
-    /* Set the height to your desired size */
     border-radius: 50%;
-    /* Make the image rounded */
     object-fit: cover;
-    /* Maintain aspect ratio and crop if needed */
 }
 
+/* Container */
 .container {
     display: flex;
     flex-direction: column;
@@ -89,6 +92,7 @@ img {
     margin: 0 auto;
 }
 
+/* Content */
 .content {
     display: none;
 }
@@ -101,11 +105,10 @@ img {
 .content p {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
-    /* You can adjust the font size as per your preference */
     line-height: 1.5;
-    /* Adjust the line height to improve readability */
 }
 
+/* Progress Bar */
 .progress-bar-container {
     width: 300px;
     background-color: #333;
@@ -144,6 +147,7 @@ img {
     margin-top: 20px;
 }
 
+/* Project Buttons */
 .project-buttons {
     display: flex;
     justify-content: center;
@@ -154,38 +158,30 @@ img {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    /* Change justify-content as needed (e.g., 'space-between', 'space-around') to control spacing */
 }
 
 .project-button {
     width: 100px;
-    /* Adjust the width to fit your image size */
     height: 100px;
-    /* Adjust the height to fit your image size */
     border-radius: 50%;
     overflow: hidden;
-    /* Clip the image to fit within the circular button */
     cursor: pointer;
     transition: transform 0.3s;
     border: 3px solid #555;
-    /* Add border and adjust border color and size */
 }
 
 .project-button img {
     width: 100%;
-    /* Make the image fill the container */
     height: 100%;
-    /* Make the image fill the container */
     object-fit: cover;
-    /* Maintain aspect ratio and cover the container */
 }
 
 .project-button:hover {
     transform: scale(1.1);
     border-color: #888;
-    /* Change border color on hover */
 }
 
+/* Social Media Buttons */
 .social-media-buttons {
     display: flex;
     justify-content: center;
@@ -194,9 +190,7 @@ img {
 
 .social-media-button {
     width: 30px;
-    /* Adjust the width to fit your image size */
     height: 30px;
-    /* Adjust the height to fit your image size */
     margin: 5px;
     cursor: pointer;
     transition: transform 0.3s;
