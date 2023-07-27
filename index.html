@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Radoslav Chobanov - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(27, 41, 29);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: silver;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c0c0c0;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 250px;
+            /* Set the width to your desired size */
+            height: 250px;
+            /* Set the height to your desired size */
+            border-radius: 50%;
+            /* Make the image rounded */
+            object-fit: cover;
+            /* Maintain aspect ratio and crop if needed */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* Custom font for the "About Me" content */
+        .content p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            /* You can adjust the font size as per your preference */
+            line-height: 1.5;
+            /* Adjust the line height to improve readability */
+        }
+
+        .progress-bar-container {
+            width: 300px;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background-color: #5d5d5d;
+            text-align: left;
+            line-height: 20px;
+            color: white;
+        }
+
+        /* Custom styles for the progress bars */
+        .progress-label {
+            color: white;
+            font-weight: bold;
+            padding: 5px;
+            text-align: left;
+        }
+
+        /* Custom styles for the CV download button */
+        .download-cv-btn {
+            background-color: silver;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .project-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .project-buttons-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            /* Change justify-content as needed (e.g., 'space-between', 'space-around') to control spacing */
+        }
+
+        .project-button {
+            width: 100px;
+            /* Adjust the width to fit your image size */
+            height: 100px;
+            /* Adjust the height to fit your image size */
+            border-radius: 50%;
+            overflow: hidden;
+            /* Clip the image to fit within the circular button */
+            cursor: pointer;
+            transition: transform 0.3s;
+            border: 3px solid #555;
+            /* Add border and adjust border color and size */
+        }
+
+        .project-button img {
+            width: 100%;
+            /* Make the image fill the container */
+            height: 100%;
+            /* Make the image fill the container */
+            object-fit: cover;
+            /* Maintain aspect ratio and cover the container */
+        }
+
+        .project-button:hover {
+            transform: scale(1.1);
+            border-color: #888;
+            /* Change border color on hover */
+        }
+
+        .social-media-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .social-media-button {
+            width: 30px;
+            /* Adjust the width to fit your image size */
+            height: 30px;
+            /* Adjust the height to fit your image size */
+            margin: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .social-media-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Radoslav Chobanov</h1>
+        <img src="IMG_20191002_185905.jpg" alt="Your Image">
+
+        <!-- Social media buttons -->
+        <div class="social-media-buttons">
+            <a href="https://www.gmail.com" target="_blank">
+                <img class="social-media-button" src="gmail_icon.png" alt="Gmail">
+            </a>
+            <a href="https://www.linkedin.com/in/rado-chobanov/" target="_blank">
+                <img class="social-media-button" src="linkedin_icon.png" alt="Linkedin">
+            </a>
+            <a href="https://github.com/radoslavchobanov" target="_blank">
+                <img class="social-media-button" src="github_icon.png" alt="Github">
+            </a>
+            <!-- Add more social media buttons as needed -->
+        </div>
+
+        <nav>
+            <button onclick="toggleContent('about')">About me</button>
+            <button onclick="toggleContent('skills')">Skills</button>
+            <button onclick="toggleContent('projects')">Projects</button>
+            <button onclick="toggleContent('career')">Career</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content" id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello there!
+
+                I'm an outgoing and passionate individual with a professional background in game development. Currently,
+                I
+                thrive in the exciting world of creating interactive and captivating gaming experiences. I am always
+                eager
+                to expand my knowledge and expertise within this dynamic career path, constantly seeking new challenges
+                and
+                opportunities to grow.
+
+                Gaming isn't just my profession; it's also my ultimate passion. In my free time, you'll often find me
+                immersing myself in various game genres such as strategy, MOBA, and RPG. Exploring virtual worlds and
+                diving
+                into intriguing narratives fuels my creativity and keeps my innovative spirit alive.
+
+                However, my interests don't stop at gaming. I'm constantly driven by the desire to improve and learn.
+                Whether it's building new game mechanics, brainstorming innovative ideas, or simply exploring uncharted
+                territories, I find joy in every opportunity to expand my creative horizons.
+
+                Beyond the digital realm, I'm equally fascinated by the real world. I have a keen sense of adventure and
+                enjoy exploring different places both geographically and spiritually. From visiting ancient landmarks to
+                embracing diverse cultures, I find immense fulfillment in broadening my perspectives and understanding
+                the
+                richness of the world around me.
+
+                When I'm not lost in the virtual or physical worlds, I have a range of hobbies that keep me balanced and
+                content. Strumming my guitar brings me tranquility and helps me express my emotions through music.
+                Reading
+                books nourishes my mind and fuels my imagination. Regular exercise keeps me healthy and ready to tackle
+                new
+                challenges. And, of course, I love experimenting with cooking, as it allows me to explore creativity in
+                yet
+                another form.
+
+                In summary, I'm an outgoing and adventurous game developer who seeks continuous growth and innovation in
+                my
+                professional journey. My love for gaming, passion for creativity, and curiosity about the world drive me
+                to
+                embrace new experiences and cherish the joy of self-improvement.
+            </p>
+        </div>
+
+        <div class="content" id="skills">
+            <h2>Skills</h2>
+            <h3>Programming languages</h3>
+            <div class="progress-bar-container">
+                <div class="progress-label">C#</div>
+                <div class="progress-bar" id="skill1" style="width: 85%;">85</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Python</div>
+                <div class="progress-bar" id="skill2" style="width: 65%;">65</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Shell</div>
+                <div class="progress-bar" id="skill7" style="width: 60%;">60</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">C++</div>
+                <div class="progress-bar" id="skill4" style="width: 55%;">55</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Java</div>
+                <div class="progress-bar" id="skill3" style="width: 55%;">55</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">C</div>
+                <div class="progress-bar" id="skill6" style="width: 50%;">50</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">SQL</div>
+                <div class="progress-bar" id="skill5" style="width: 50%;">50</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">LaTeX</div>
+                <div class="progress-bar" id="skill16" style="width: 50%;">50</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Javascript</div>
+                <div class="progress-bar" id="skill16" style="width: 50%;">50</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">HTML</div>
+                <div class="progress-bar" id="skill16" style="width: 45%;">45</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">CSS</div>
+                <div class="progress-bar" id="skill16" style="width: 40%;">40</div>
+            </div>
+            <!-- Add more progress bars for other skills -->
+
+            <h3>Engines</h3>
+            <div class="progress-bar-container">
+                <div class="progress-label">Unity</div>
+                <div class="progress-bar" id="skill7" style="width: 95%;">95</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Godot</div>
+                <div class="progress-bar" id="skill8" style="width: 80%;">80</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Unreal Engine</div>
+                <div class="progress-bar" id="skill9" style="width: 40%;">40</div>
+            </div>
+
+            <h3>Tools</h3>
+            <div class="progress-bar-container">
+                <div class="progress-label">ChatGPT</div>
+                <div class="progress-bar" id="skill10" style="width: 90%;">90</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Git</div>
+                <div class="progress-bar" id="skill10" style="width: 90%;">90</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">VS/VSCode</div>
+                <div class="progress-bar" id="skill11" style="width: 90%;">90</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Firebase</div>
+                <div class="progress-bar" id="skill11" style="width: 90%;">90</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Jira</div>
+                <div class="progress-bar" id="skill12" style="width: 80%;">80</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Confluence</div>
+                <div class="progress-bar" id="skill13" style="width: 75%;">75</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">PlayFab</div>
+                <div class="progress-bar" id="skill11" style="width: 75%;">75</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">GIMP</div>
+                <div class="progress-bar" id="skill14" style="width: 65%;">65</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Jupyter notebook</div>
+                <div class="progress-bar" id="skill15" style="width: 65%;">65</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">Photon</div>
+                <div class="progress-bar" id="skill11" style="width: 60%;">60</div>
+            </div>
+
+            <h3>Spoken languages</h3>
+            <div class="progress-bar-container">
+                <div class="progress-bar-container">
+                    <div class="progress-label">Bulgarian</div>
+                    <div class="progress-bar" id="skill10" style="width: 100%;">100</div>
+                </div>
+                <div class="progress-label">English</div>
+                <div class="progress-bar" id="skill10" style="width: 85%;">85</div>
+            </div>
+        </div>
+
+        <div class="content" id="projects">
+            <h2>Projects</h2>
+            <!-- Your existing project content here -->
+            <div class="project-buttons-container">
+                <div class="project-buttons">
+                    <img class="project-button" src="clipart1272498.png"
+                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/Drawy')" alt="Project 1">
+                </div>
+                <div class="project-buttons">
+                    <img class="project-button" src="red_capsule.png"
+                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/tft_2d')" alt="Project 1">
+                </div>
+                <div class="project-buttons">
+                    <img class="project-button" src="fire_mage.png"
+                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/TheVoodoo')" alt="Project 1">
+                </div>
+                <div class="project-buttons">
+                    <img class="project-button" src="qguaratBot.png"
+                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/qguaratBot')" alt="Project 1">
+                </div>
+                <div class="project-buttons">
+                    <img class="project-button" src="blackjack.png"
+                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/Beating-blackjack-with-mathematics')"
+                        alt="Project 1">
+                </div>
+                <div class="project-buttons">
+                    <img class="project-button" src="angry_cube.png"
+                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/Angry-Cube')" alt="Project 1">
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="career">
+            <h2>Career</h2>
+            <p>
+                <!-- Your career content goes here -->
+                <a class="download-cv-btn" onclick="openLinkInNewTab('RADOSLAV_CHOBANOV_Resume.pdf')"
+                    download>Resume</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(sectionId) {
+            var selectedContent = document.getElementById(sectionId);
+            var isActive = selectedContent.classList.toggle('active');
+
+            var contentContainers = document.getElementsByClassName('content');
+            for (var i = 0; i < contentContainers.length; i++) {
+                if (contentContainers[i] !== selectedContent) {
+                    contentContainers[i].classList.remove('active');
+                }
+            }
+        }
+
+        function toggleProject(projectId) {
+            var selectedProjectContent = document.getElementById(projectId + '-content');
+            var isActive = selectedProjectContent.classList.toggle('active');
+
+            var projectContents = document.getElementsByClassName('project-content');
+            for (var i = 0; i < projectContents.length; i++) {
+                if (projectContents[i] !== selectedProjectContent && projectContents[i].classList.contains('active')) {
+                    projectContents[i].classList.remove('active');
+                }
+            }
+
+            var projectLink = selectedProjectContent.querySelector('.project-link');
+            if (isActive) {
+                projectLink.style.display = 'block';
+            } else {
+                projectLink.style.display = 'none';
+            }
+        }
+
+        function openLinkInNewTab(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+
+</html>
