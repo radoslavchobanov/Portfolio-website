@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(27, 41, 29);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: silver;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0c0c0;
+}
+
+img {
+    margin-top: 20px;
+    width: 250px;
+    /* Set the width to your desired size */
+    height: 250px;
+    /* Set the height to your desired size */
+    border-radius: 50%;
+    /* Make the image rounded */
+    object-fit: cover;
+    /* Maintain aspect ratio and crop if needed */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* Custom font for the "About Me" content */
+.content p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    /* You can adjust the font size as per your preference */
+    line-height: 1.5;
+    /* Adjust the line height to improve readability */
+}
+
+.progress-bar-container {
+    width: 300px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #5d5d5d;
+    text-align: left;
+    line-height: 20px;
+    color: white;
+}
+
+/* Custom styles for the progress bars */
+.progress-label {
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    text-align: left;
+}
+
+/* Custom styles for the CV download button */
+.download-cv-btn {
+    background-color: silver;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.project-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    /* Change justify-content as needed (e.g., 'space-between', 'space-around') to control spacing */
+}
+
+.project-button {
+    width: 100px;
+    /* Adjust the width to fit your image size */
+    height: 100px;
+    /* Adjust the height to fit your image size */
+    border-radius: 50%;
+    overflow: hidden;
+    /* Clip the image to fit within the circular button */
+    cursor: pointer;
+    transition: transform 0.3s;
+    border: 3px solid #555;
+    /* Add border and adjust border color and size */
+}
+
+.project-button img {
+    width: 100%;
+    /* Make the image fill the container */
+    height: 100%;
+    /* Make the image fill the container */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the container */
+}
+
+.project-button:hover {
+    transform: scale(1.1);
+    border-color: #888;
+    /* Change border color on hover */
+}
+
+.social-media-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-media-button {
+    width: 30px;
+    /* Adjust the width to fit your image size */
+    height: 30px;
+    /* Adjust the height to fit your image size */
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-media-button:hover {
+    transform: scale(1.1);
+}
