@@ -4,243 +4,755 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radoslav Chobanov - Portfolio</title>
+    <title>Radoslav Chobanov - Full-Stack Engineer & Python Automation Specialist</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>Radoslav Chobanov</h1>
-        <img src="images/IMG_20191002_185905.jpg" alt="Your Image">
+    <!-- CRT Screen Effect Overlay -->
+    <div class="crt-overlay"></div>
+    <div class="scanline"></div>
 
-        <!-- Social media buttons -->
-        <div class="social-media-buttons">
-            <a href="mailto:rado.chobanov97@gmail.com">
-                <img class="social-media-button" src="images/gmail_icon.png" alt="Gmail">
-            </a>
-            <a href="https://www.linkedin.com/in/rado-chobanov/" target="_blank">
-                <img class="social-media-button" src="images/linkedin_icon.png" alt="Linkedin">
-            </a>
-            <a href="https://github.com/radoslavchobanov" target="_blank">
-                <img class="social-media-button" src="images/github_icon.png" alt="Github">
-            </a>
-            <!-- Add more social media buttons as needed -->
-        </div>
-
-        <nav>
-            <button onclick="toggleContent('about')">About me</button>
-            <button onclick="toggleContent('skills')">Skills</button>
-            <button onclick="toggleContent('projects')">Projects</button>
-            <button onclick="toggleContent('career')">Career</button>
-        </nav>
-    </header>
-
-    <div class="container">
-        <div class="content" id="about">
-            <h2>About Me</h2>
-            <p>
-                Hello there!
-
-                I'm an outgoing and passionate individual with a professional background in game development. Currently,
-                I
-                thrive in the exciting world of creating interactive and captivating gaming experiences. I am always
-                eager
-                to expand my knowledge and expertise within this dynamic career path, constantly seeking new challenges
-                and
-                opportunities to grow.
-
-                Gaming isn't just my profession; it's also my ultimate passion. In my free time, you'll often find me
-                immersing myself in various game genres such as strategy, MOBA, and RPG. Exploring virtual worlds and
-                diving
-                into intriguing narratives fuels my creativity and keeps my innovative spirit alive.
-
-                However, my interests don't stop at gaming. I'm constantly driven by the desire to improve and learn.
-                Whether it's building new game mechanics, brainstorming innovative ideas, or simply exploring uncharted
-                territories, I find joy in every opportunity to expand my creative horizons.
-
-                Beyond the digital realm, I'm equally fascinated by the real world. I have a keen sense of adventure and
-                enjoy exploring different places both geographically and spiritually. From visiting ancient landmarks to
-                embracing diverse cultures, I find immense fulfillment in broadening my perspectives and understanding
-                the
-                richness of the world around me.
-
-                When I'm not lost in the virtual or physical worlds, I have a range of hobbies that keep me balanced and
-                content. Strumming my guitar brings me tranquility and helps me express my emotions through music.
-                Reading
-                books nourishes my mind and fuels my imagination. Regular exercise keeps me healthy and ready to tackle
-                new
-                challenges. And, of course, I love experimenting with cooking, as it allows me to explore creativity in
-                yet
-                another form.
-
-                In summary, I'm an outgoing and adventurous game developer who seeks continuous growth and innovation in
-                my
-                professional journey. My love for gaming, passion for creativity, and curiosity about the world drive me
-                to
-                embrace new experiences and cherish the joy of self-improvement.
-            </p>
-        </div>
-
-        <div class="content" id="skills">
-            <h2>Skills</h2>
-            <h3>Programming languages</h3>
-            <div class="progress-bar-container">
-                <div class="progress-label">C#</div>
-                <div class="progress-bar" id="skill1" style="width: 85%;">85</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Python</div>
-                <div class="progress-bar" id="skill2" style="width: 65%;">65</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Shell</div>
-                <div class="progress-bar" id="skill7" style="width: 60%;">60</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">SQL</div>
-                <div class="progress-bar" id="skill5" style="width: 60%;">60</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Java</div>
-                <div class="progress-bar" id="skill3" style="width: 55%;">55</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">LaTeX</div>
-                <div class="progress-bar" id="skill16" style="width: 50%;">50</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Javascript</div>
-                <div class="progress-bar" id="skill16" style="width: 50%;">50</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">HTML</div>
-                <div class="progress-bar" id="skill16" style="width: 45%;">45</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">CSS</div>
-                <div class="progress-bar" id="skill16" style="width: 40%;">40</div>
-            </div>
-
-            <h3>Engines</h3>
-            <div class="progress-bar-container">
-                <div class="progress-label">Unity</div>
-                <div class="progress-bar" id="skill7" style="width: 95%;">95</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Godot</div>
-                <div class="progress-bar" id="skill8" style="width: 80%;">80</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Unreal Engine</div>
-                <div class="progress-bar" id="skill9" style="width: 40%;">40</div>
-            </div>
-
-            <h3>Tools</h3>
-            <div class="progress-bar-container">
-                <div class="progress-label">Git</div>
-                <div class="progress-bar" id="skill10" style="width: 90%;">90</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">VS/VSCode</div>
-                <div class="progress-bar" id="skill11" style="width: 90%;">90</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Flask</div>
-                <div class="progress-bar" id="skill10" style="width: 90%;">90</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">ChatGPT</div>
-                <div class="progress-bar" id="skill10" style="width: 90%;">90</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Firebase</div>
-                <div class="progress-bar" id="skill11" style="width: 85%;">85</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Jira</div>
-                <div class="progress-bar" id="skill12" style="width: 80%;">80</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Confluence</div>
-                <div class="progress-bar" id="skill13" style="width: 75%;">75</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">PlayFab</div>
-                <div class="progress-bar" id="skill11" style="width: 75%;">75</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Postgres</div>
-                <div class="progress-bar" id="skill11" style="width: 70%;">70</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">MySQL</div>
-                <div class="progress-bar" id="skill11" style="width: 60%;">60</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">GIMP</div>
-                <div class="progress-bar" id="skill14" style="width: 60%;">60</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Jupyter notebook</div>
-                <div class="progress-bar" id="skill15" style="width: 40%;">40</div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-label">Photon</div>
-                <div class="progress-bar" id="skill11" style="width: 40%;">40</div>
-            </div>
-
-            <h3>Spoken languages</h3>
-            <div class="progress-bar-container">
-                <div class="progress-bar-container">
-                    <div class="progress-label">Bulgarian</div>
-                    <div class="progress-bar" id="skill10" style="width: 100%;">100</div>
+    <div class="terminal-container">
+        <header>
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="control-dot red"></span>
+                    <span class="control-dot yellow"></span>
+                    <span class="control-dot green"></span>
                 </div>
-                <div class="progress-label">English</div>
-                <div class="progress-bar" id="skill10" style="width: 85%;">85</div>
+                <div class="terminal-title">radoslav@portfolio:~$</div>
             </div>
-        </div>
 
-        <div class="content" id="projects">
-            <h2>Projects</h2>
-            <!-- Your existing project content here -->
-            <div class="project-buttons-container">
-                <div class="project-buttons">
-                    <img class="project-button" src="images/clipart1272498.png"
-                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/Drawy')" alt="Project 1">
-                </div>
-                <div class="project-buttons">
-                    <img class="project-button" src="images/red_capsule.png"
-                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/tft_2d')" alt="Project 1">
-                </div>
-                <div class="project-buttons">
-                    <img class="project-button" src="images/fire_mage.png"
-                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/TheVoodoo')" alt="Project 1">
-                </div>
-                <div class="project-buttons">
-                    <img class="project-button" src="images/qguaratBot.png"
-                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/qguaratBot')" alt="Project 1">
-                </div>
-                <div class="project-buttons">
-                    <img class="project-button" src="images/blackjack.png"
-                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/Beating-blackjack-with-mathematics')"
-                        alt="Project 1">
-                </div>
-                <div class="project-buttons">
-                    <img class="project-button" src="images/angry_cube.png"
-                        onclick="openLinkInNewTab('https://github.com/radoslavchobanov/Angry-Cube')" alt="Project 1">
+            <div class="profile-section">
+                <img src="images/IMG_20191002_185905.jpg" alt="Radoslav Chobanov" class="profile-img">
+                <div class="profile-info">
+                    <h1 class="profile-name">Radoslav Chobanov</h1>
+                    <p class="title-text">Full-Stack Engineer | Website Builder | Python Automation</p>
+
+                    <!-- Social media buttons -->
+                    <div class="social-media-buttons">
+                        <a href="mailto:rado.chobanov97@gmail.com" class="social-link" title="Email">
+                            <img class="social-media-button" src="images/gmail_icon.png" alt="Gmail">
+                        </a>
+                        <a href="https://www.linkedin.com/in/rado-chobanov/" target="_blank" class="social-link" title="LinkedIn">
+                            <img class="social-media-button" src="images/linkedin_icon.png" alt="Linkedin">
+                        </a>
+                        <a href="https://github.com/radoslavchobanov" target="_blank" class="social-link" title="GitHub">
+                            <img class="social-media-button" src="images/github_icon.png" alt="Github">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="content" id="career">
-            <h2>Career</h2>
-            <p>
-                <!-- Your career content goes here -->
-                <a class="download-cv-btn" onclick="openLinkInNewTab('RADOSLAV_CHOBANOV_Resume.pdf')"
-                    download>Resume</a>
-            </p>
+            <nav class="terminal-nav">
+                <button onclick="toggleContent('services')" class="nav-btn" data-cmd="services">
+                    <span class="btn-icon">💼</span> Services
+                </button>
+                <button onclick="toggleContent('projects')" class="nav-btn" data-cmd="projects">
+                    <span class="btn-icon">🚀</span> Portfolio
+                </button>
+                <button onclick="toggleContent('skills')" class="nav-btn" data-cmd="skills">
+                    <span class="btn-icon">⚡</span> Expertise
+                </button>
+                <button onclick="toggleContent('about')" class="nav-btn" data-cmd="about">
+                    <span class="btn-icon">👤</span> About
+                </button>
+                <button onclick="toggleContent('contact')" class="nav-btn" data-cmd="contact">
+                    <span class="btn-icon">📞</span> Contact
+                </button>
+            </nav>
+        </header>
+
+        <div class="container">
+            <!-- SERVICES SECTION -->
+            <div class="content terminal-output" id="services">
+                <div class="output-header">
+                    <span class="section-icon">💼</span> Professional Services
+                </div>
+                <div class="output-content">
+                    <p class="services-intro">I offer comprehensive, end-to-end solutions tailored to your business needs. Choose from my specialized service offerings:</p>
+
+                    <div class="services-grid">
+
+                        <!-- Service 1: Digital Presence Engineering -->
+                        <div class="service-card" onclick="toggleContent('service-web')">
+                            <div class="service-icon">🌐</div>
+                            <h3>Digital Presence Engineering</h3>
+                            <p class="service-tagline">Complete web solutions from concept to deployment</p>
+                            <ul class="service-features">
+                                <li>✓ Custom website development</li>
+                                <li>✓ Domain & hosting management</li>
+                                <li>✓ DevOps & CI/CD setup</li>
+                                <li>✓ Ongoing maintenance & support</li>
+                                <li>✓ SEO & performance optimization</li>
+                            </ul>
+                            <div class="service-cta">Learn More →</div>
+                        </div>
+
+                        <!-- Service 2: Automation Solutions -->
+                        <div class="service-card" onclick="toggleContent('service-automation')">
+                            <div class="service-icon">🤖</div>
+                            <h3>End-to-End Automation Solutions</h3>
+                            <p class="service-tagline">Python-powered automation & data engineering</p>
+                            <ul class="service-features">
+                                <li>✓ Business process automation</li>
+                                <li>✓ Data pipelines & ETL systems</li>
+                                <li>✓ Integration with existing tools</li>
+                                <li>✓ Custom automation scripts</li>
+                                <li>✓ Monitoring & maintenance</li>
+                            </ul>
+                            <div class="service-cta">Learn More →</div>
+                        </div>
+
+                        <!-- Service 3: Backend Development -->
+                        <div class="service-card" onclick="toggleContent('service-backend')">
+                            <div class="service-icon">⚙️</div>
+                            <h3>Backend Development Services</h3>
+                            <p class="service-tagline">Scalable APIs & robust server solutions</p>
+                            <ul class="service-features">
+                                <li>✓ REST API development</li>
+                                <li>✓ Microservices architecture</li>
+                                <li>✓ Database design & optimization</li>
+                                <li>✓ Cloud deployment (AWS, GCP, Azure)</li>
+                                <li>✓ Security & performance tuning</li>
+                            </ul>
+                            <div class="service-cta">Learn More →</div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-prompt">
+                        <p>📧 Ready to discuss your project? <a href="#" onclick="toggleContent('contact'); return false;" class="inline-link">Get in touch</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SERVICE DETAIL: Digital Presence Engineering -->
+            <div class="content terminal-output" id="service-web">
+                <div class="output-header">
+                    <span class="section-icon">🌐</span> Digital Presence Engineering
+                    <button onclick="toggleContent('services')" class="back-btn">← Back to Services</button>
+                </div>
+                <div class="output-content">
+                    <h3 class="service-detail-heading">Your Complete Digital Identity Solution</h3>
+                    <p>I don't just build websites—I create comprehensive digital presences. From initial concept through deployment and beyond, I handle every aspect of bringing your business online.</p>
+
+                    <h4>🎯 What's Included</h4>
+                    <div class="service-includes">
+                        <div class="include-item">
+                            <strong>Custom Website Development</strong>
+                            <p>Unique, responsive designs tailored to your brand and business goals. Modern frameworks, clean code, and user-friendly interfaces.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Domain & Hosting Management</strong>
+                            <p>I handle domain registration, DNS configuration, SSL certificates, and reliable hosting setup—so you don't have to worry about the technical details.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>DevOps & Deployment</strong>
+                            <p>Automated deployment pipelines, version control, monitoring, and infrastructure as code for seamless updates and reliability.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Ongoing Support</strong>
+                            <p>Regular updates, security patches, performance monitoring, and technical support to keep your site running smoothly.</p>
+                        </div>
+                    </div>
+
+                    <h4>💼 My Process</h4>
+                    <ol class="process-list">
+                        <li><strong>Discovery:</strong> Understanding your business, goals, and target audience</li>
+                        <li><strong>Design & Planning:</strong> Creating wireframes and technical architecture</li>
+                        <li><strong>Development:</strong> Building your custom solution with modern best practices</li>
+                        <li><strong>Deployment:</strong> Setting up hosting, domains, and going live</li>
+                        <li><strong>Maintenance:</strong> Ongoing support, updates, and optimization</li>
+                    </ol>
+
+                    <h4>🚀 Related Projects</h4>
+                    <p>This portfolio website is an example of my web development work—featuring responsive design, optimized performance, and modern tech stack.</p>
+
+                    <div class="cta-section">
+                        <button onclick="toggleContent('contact')" class="primary-cta">Start Your Project →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SERVICE DETAIL: Automation Solutions -->
+            <div class="content terminal-output" id="service-automation">
+                <div class="output-header">
+                    <span class="section-icon">🤖</span> End-to-End Automation Solutions
+                    <button onclick="toggleContent('services')" class="back-btn">← Back to Services</button>
+                </div>
+                <div class="output-content">
+                    <h3 class="service-detail-heading">Streamline Your Business with Intelligent Automation</h3>
+                    <p>I build complete automation solutions that don't just run once—they become integral parts of your workflow, handling repetitive tasks, processing data, and integrating with your existing systems.</p>
+
+                    <h4>🎯 What I Automate</h4>
+                    <div class="service-includes">
+                        <div class="include-item">
+                            <strong>Business Process Automation</strong>
+                            <p>Automate repetitive tasks: data entry, report generation, email workflows, file processing, and more.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Data Engineering & ETL</strong>
+                            <p>Build pipelines to extract, transform, and load data from multiple sources. Clean, process, and organize data for analysis.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>System Integration</strong>
+                            <p>Connect different tools and platforms: CRMs, databases, APIs, spreadsheets, and third-party services.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Monitoring & Alerts</strong>
+                            <p>Automated monitoring systems that notify you of issues, track KPIs, and generate regular reports.</p>
+                        </div>
+                    </div>
+
+                    <h4>💡 Example Use Cases</h4>
+                    <ul class="use-cases">
+                        <li>Automated data extraction from websites and APIs for market research</li>
+                        <li>Custom bots for task management and team notifications</li>
+                        <li>Data pipeline for consolidating information from multiple sources</li>
+                        <li>Automated report generation and distribution</li>
+                        <li>Integration between different business tools (Jira, Slack, databases, etc.)</li>
+                    </ul>
+
+                    <h4>🛠️ Tech Stack</h4>
+                    <div class="tech-stack-inline">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Pandas</span>
+                        <span class="tech-badge">Selenium</span>
+                        <span class="tech-badge">BeautifulSoup</span>
+                        <span class="tech-badge">Apache Airflow</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Redis</span>
+                        <span class="tech-badge">Docker</span>
+                    </div>
+
+                    <h4>🚀 Related Projects</h4>
+                    <p>Check out <strong>qguaratBot</strong> and <strong>Beating Blackjack</strong> in my portfolio for examples of automation and data processing work.</p>
+
+                    <div class="cta-section">
+                        <button onclick="toggleContent('contact')" class="primary-cta">Discuss Your Automation →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SERVICE DETAIL: Backend Development -->
+            <div class="content terminal-output" id="service-backend">
+                <div class="output-header">
+                    <span class="section-icon">⚙️</span> Backend Development Services
+                    <button onclick="toggleContent('services')" class="back-btn">← Back to Services</button>
+                </div>
+                <div class="output-content">
+                    <h3 class="service-detail-heading">Robust, Scalable Backend Solutions</h3>
+                    <p>I design and build the server-side infrastructure that powers modern applications—from RESTful APIs to complex microservices architectures.</p>
+
+                    <h4>🎯 What I Build</h4>
+                    <div class="service-includes">
+                        <div class="include-item">
+                            <strong>REST API Development</strong>
+                            <p>Clean, well-documented APIs following industry best practices. Authentication, rate limiting, and comprehensive error handling.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Microservices Architecture</strong>
+                            <p>Scalable, maintainable systems with properly separated concerns. Service discovery, message queues, and containerization.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Database Design</strong>
+                            <p>Efficient database schemas, optimization for performance, migrations, and backup strategies.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Cloud Deployment</strong>
+                            <p>Deploy to AWS, Google Cloud, or Azure. Infrastructure as code, auto-scaling, and monitoring.</p>
+                        </div>
+                    </div>
+
+                    <h4>⚡ Key Capabilities</h4>
+                    <ul class="capabilities-list">
+                        <li><strong>Authentication & Security:</strong> JWT, OAuth, role-based access control</li>
+                        <li><strong>Real-time Features:</strong> WebSockets, Server-Sent Events, pub/sub patterns</li>
+                        <li><strong>Performance:</strong> Caching strategies, query optimization, load balancing</li>
+                        <li><strong>Testing:</strong> Unit tests, integration tests, CI/CD pipelines</li>
+                        <li><strong>Documentation:</strong> OpenAPI/Swagger specs, clear API documentation</li>
+                    </ul>
+
+                    <h4>🛠️ Tech Stack</h4>
+                    <div class="tech-stack-inline">
+                        <span class="tech-badge">Flask</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">Redis</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">Kubernetes</span>
+                        <span class="tech-badge">AWS</span>
+                    </div>
+
+                    <h4>🚀 Related Projects</h4>
+                    <p>My game backend systems (Firebase, PlayFab integration) demonstrate scalable architecture and real-time data synchronization.</p>
+
+                    <div class="cta-section">
+                        <button onclick="toggleContent('contact')" class="primary-cta">Start Your Backend Project →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABOUT ME SECTION -->
+            <div class="content terminal-output" id="about">
+                <div class="output-header">
+                    <span class="section-icon">👤</span> About Me
+                </div>
+                <div class="output-content">
+                    <p>
+                        Hello there! I'm an outgoing and passionate engineer with a diverse background spanning game development,
+                        backend engineering, Python automation, and DevOps practices.
+                    </p>
+                    <p>
+                        Currently, I specialize in building robust backend systems, automating complex workflows with Python,
+                        and implementing DevOps solutions that streamline development processes. My experience in game development
+                        has given me a unique perspective on performance optimization, real-time systems, and scalable architectures.
+                    </p>
+                    <p>
+                        I'm driven by the desire to solve challenging technical problems, whether it's architecting microservices,
+                        building automation tools, or optimizing deployment pipelines. My game development background fuels my
+                        creativity in approaching system design and infrastructure challenges.
+                    </p>
+                    <p>
+                        Beyond coding, you'll find me exploring new technologies, contributing to open-source projects, or diving
+                        deep into strategy games, MOBAs, and RPGs. I believe in continuous learning and pushing the boundaries of
+                        what's possible with technology.
+                    </p>
+                    <p>
+                        When I'm not at the keyboard, I enjoy playing guitar, reading technical books and sci-fi, staying active
+                        through regular exercise, and experimenting in the kitchen. I'm also passionate about traveling and
+                        experiencing different cultures, which helps me approach problems from diverse perspectives.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content terminal-output" id="skills">
+                <div class="output-header">
+                    <span class="section-icon">⚡</span> My Skills & Expertise
+                </div>
+                <div class="output-content skills-grid">
+
+                    <div class="skill-category">
+                        <h3><span class="folder-icon">💻</span> Programming Languages</h3>
+                        <div class="skill-item">
+                            <div class="skill-label">Python</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 85%;"></div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">C#</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 85%;"></div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Bash / Shell Scripting</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 80%;"></div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">SQL</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 75%;"></div>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">HTML / CSS</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 75%;"></div>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">JavaScript / TypeScript</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 70%;"></div>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><span class="folder-icon">⚙️</span> Backend & APIs</h3>
+                        <div class="skill-item">
+                            <div class="skill-label">Flask / FastAPI</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 90%;"></div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Django</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 85%;"></div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">REST API Design</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 85%;"></div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Microservices</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 75%;"></div>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">WebSockets / Real-time</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 70%;"></div>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Node.js / Express</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 65%;"></div>
+                                <span class="skill-percent">65%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><span class="folder-icon">🤖</span> Automation & Data</h3>
+                        <div class="skill-item">
+                            <div class="skill-label">Python Automation</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 90%;"></div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Web Scraping (Selenium, BS4)</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 85%;"></div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Pandas / NumPy</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 80%;"></div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Data Processing</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 80%;"></div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">ETL Pipelines</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 75%;"></div>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><span class="folder-icon">🗄️</span> Databases</h3>
+                        <div class="skill-item">
+                            <div class="skill-label">PostgreSQL</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 80%;"></div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Database Design</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 80%;"></div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">MySQL</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 75%;"></div>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Redis / Caching</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 70%;"></div>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><span class="folder-icon">☁️</span> DevOps & Cloud</h3>
+                        <div class="skill-item">
+                            <div class="skill-label">Git / GitHub / GitLab</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 90%;"></div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Docker</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 85%;"></div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Linux Server Admin</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 80%;"></div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">CI/CD Pipelines</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 75%;"></div>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Nginx / Apache</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 75%;"></div>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">AWS / Cloud Platforms</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 65%;"></div>
+                                <span class="skill-percent">65%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><span class="folder-icon">🎮</span> Game Development</h3>
+                        <div class="skill-item">
+                            <div class="skill-label">Unity Engine</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 95%;"></div>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Godot Engine</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 80%;"></div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Game Backend (PlayFab)</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 75%;"></div>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label">Multiplayer Systems</div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar" style="width: 70%;"></div>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="content terminal-output" id="projects">
+                <div class="output-header">
+                    <span class="section-icon">🚀</span> My Projects
+                </div>
+                <div class="output-content">
+                    <div class="projects-grid">
+
+                        <div class="project-card" onclick="openLinkInNewTab('https://github.com/radoslavchobanov/Drawy')">
+                            <div class="project-image">
+                                <img src="images/clipart1272498.png" alt="Drawy">
+                            </div>
+                            <div class="project-info">
+                                <h3>Drawy</h3>
+                                <p>Interactive drawing and creativity game application</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Unity</span>
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">Game Dev</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" onclick="openLinkInNewTab('https://github.com/radoslavchobanov/tft_2d')">
+                            <div class="project-image">
+                                <img src="images/red_capsule.png" alt="TFT 2D">
+                            </div>
+                            <div class="project-info">
+                                <h3>TFT 2D</h3>
+                                <p>2D tactical fighting game with strategic elements</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Unity</span>
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">2D</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" onclick="openLinkInNewTab('https://github.com/radoslavchobanov/TheVoodoo')">
+                            <div class="project-image">
+                                <img src="images/fire_mage.png" alt="The Voodoo">
+                            </div>
+                            <div class="project-info">
+                                <h3>The Voodoo</h3>
+                                <p>Magic-based action game with spell-casting mechanics</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Unity</span>
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">Action</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" onclick="openLinkInNewTab('https://github.com/radoslavchobanov/qguaratBot')">
+                            <div class="project-image">
+                                <img src="images/qguaratBot.png" alt="qguaratBot">
+                            </div>
+                            <div class="project-info">
+                                <h3>qguaratBot</h3>
+                                <p>Automated bot for task management and automation</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Automation</span>
+                                    <span class="tech-tag">Bot</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" onclick="openLinkInNewTab('https://github.com/radoslavchobanov/Beating-blackjack-with-mathematics')">
+                            <div class="project-image">
+                                <img src="images/blackjack.png" alt="Beating Blackjack">
+                            </div>
+                            <div class="project-info">
+                                <h3>Beating Blackjack</h3>
+                                <p>Mathematical analysis and simulation of blackjack strategies</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Math</span>
+                                    <span class="tech-tag">Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" onclick="openLinkInNewTab('https://github.com/radoslavchobanov/Angry-Cube')">
+                            <div class="project-image">
+                                <img src="images/angry_cube.png" alt="Angry Cube">
+                            </div>
+                            <div class="project-info">
+                                <h3>Angry Cube</h3>
+                                <p>Physics-based puzzle game with creative mechanics</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Unity</span>
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">Physics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="more-projects-notice">
+                        <p>💡 More projects coming soon...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTACT SECTION -->
+            <div class="content terminal-output" id="contact">
+                <div class="output-header">
+                    <span class="section-icon">📞</span> Get In Touch
+                </div>
+                <div class="output-content">
+                    <div class="contact-section">
+                        <h3 class="contact-heading">Let's Build Something Great Together</h3>
+                        <p class="contact-intro">Have a project in mind? Looking for a reliable technical partner? I'd love to hear from you.</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-info">
+                                    <h4>Email</h4>
+                                    <a href="mailto:rado.chobanov97@gmail.com" class="contact-link">rado.chobanov97@gmail.com</a>
+                                    <p class="contact-note">Best for project inquiries and detailed discussions</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">💼</div>
+                                <div class="contact-info">
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/rado-chobanov/" target="_blank" class="contact-link">linkedin.com/in/rado-chobanov</a>
+                                    <p class="contact-note">Connect professionally and view my experience</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">💻</div>
+                                <div class="contact-info">
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/radoslavchobanov" target="_blank" class="contact-link">github.com/radoslavchobanov</a>
+                                    <p class="contact-note">Explore my open-source work and code samples</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">📄</div>
+                                <div class="contact-info">
+                                    <h4>Resume / CV</h4>
+                                    <a onclick="openLinkInNewTab('RADOSLAV_CHOBANOV_Resume.pdf')" class="contact-link" style="cursor: pointer;">Download Resume (PDF)</a>
+                                    <p class="contact-note">Full professional experience and education details</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="response-time">
+                            <p>⏱️ <strong>Response Time:</strong> I typically respond within 24 hours on business days</p>
+                        </div>
+
+                        <div class="contact-cta">
+                            <h4>Ready to Start?</h4>
+                            <p>Whether you need a complete digital presence, automation solutions, or backend development—I'm here to help turn your ideas into reality.</p>
+                            <a href="mailto:rado.chobanov97@gmail.com?subject=Project Inquiry" class="primary-cta-link">Send Me a Message →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <footer class="terminal-footer">
+        <p>Built with passion, code, and creativity</p>
+        <p>© 2024 Radoslav Chobanov | Full-Stack Engineer & Python Automation Specialist</p>
+    </footer>
 
     <script src="script.js"></script>
 
