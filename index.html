@@ -589,6 +589,23 @@
                 <div class="output-content">
                     <div class="projects-grid">
 
+                        <div class="project-card" onclick="toggleContent('project-vims4all')">
+                            <div class="project-image">
+                                <img src="images/vims4all_logo.jpeg" alt="VIMS4ALL CampusBase">
+                            </div>
+                            <div class="project-info">
+                                <h3>VIMS4ALL - CampusBase</h3>
+                                <p>Full-stack school management system with multi-tenancy support</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Django</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="project-card" onclick="openLinkInNewTab('https://github.com/radoslavchobanov/Drawy')">
                             <div class="project-image">
                                 <img src="images/clipart1272498.png" alt="Drawy">
@@ -743,6 +760,134 @@
                             <p>Whether you need a complete digital presence, automation solutions, or backend development—I'm here to help turn your ideas into reality.</p>
                             <a href="mailto:rado.chobanov97@gmail.com?subject=Project Inquiry" class="primary-cta-link">Send Me a Message →</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT DETAIL: VIMS4ALL CampusBase -->
+            <div class="content terminal-output" id="project-vims4all">
+                <div class="output-header">
+                    <span class="section-icon">🎓</span> VIMS4ALL - CampusBase School Management System
+                    <button onclick="toggleContent('projects')" class="back-btn">← Back to Projects</button>
+                </div>
+                <div class="output-content">
+                    <h3 class="service-detail-heading">Enterprise School Management Platform</h3>
+                    <p>CampusBase (VIMS4ALL) is a comprehensive, full-stack school management system designed to streamline campus operations for educational institutions. Built with modern technologies and best practices, it provides a robust foundation for managing students, employees, courses, finances, and administrative tasks with multi-tenancy support.</p>
+
+                    <h4>🎯 Key Features</h4>
+                    <div class="service-includes">
+                        <div class="include-item">
+                            <strong>Student Management</strong>
+                            <p>Complete student lifecycle management including enrollment, status tracking, custodian information, and academic records. Automated PIN generation for unique student identification.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Employee & HR Management</strong>
+                            <p>Employee records, function assignments (director, registrar, instructor, accountant), career progression tracking, dependent management, and automated account closure on exit dates.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Academic Management</strong>
+                            <p>Course catalog, class scheduling, instructor assignments, academic term management, and comprehensive course registration system.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Finance & Accounting</strong>
+                            <p>Multi-account financial system with account types, ledger entries, transaction tracking, and role-based access for accountants and directors.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Multi-Tenancy Architecture</strong>
+                            <p>Institute-level data isolation ensuring complete separation between different schools/campuses. Automatic query scoping via custom middleware and managers.</p>
+                        </div>
+                        <div class="include-item">
+                            <strong>Role-Based Access Control</strong>
+                            <p>Granular permissions system with superuser, institute admin, and employee roles. Function-based access control for specific operations (director, registrar, accountant, instructor).</p>
+                        </div>
+                    </div>
+
+                    <h4>🏗️ Technical Architecture</h4>
+
+                    <h4 style="color: var(--text-primary); font-size: 16px; margin-top: 20px;">Backend (Django REST Framework)</h4>
+                    <ul class="capabilities-list">
+                        <li><strong>Framework:</strong> Django 5.1 with Django REST Framework</li>
+                        <li><strong>API Documentation:</strong> Auto-generated OpenAPI schema via drf-spectacular with Swagger/ReDoc interfaces</li>
+                        <li><strong>Authentication:</strong> JWT-based authentication using SimpleJWT</li>
+                        <li><strong>Database:</strong> PostgreSQL with advanced query optimization and connection pooling</li>
+                        <li><strong>File Storage:</strong> MinIO (S3-compatible) for media and document management</li>
+                        <li><strong>Custom Managers:</strong> InstituteScopedManager and OptionallyScopedManager for automatic data filtering</li>
+                        <li><strong>Middleware:</strong> Custom InstituteContextMiddleware for request-level tenant isolation</li>
+                    </ul>
+
+                    <h4 style="color: var(--text-primary); font-size: 16px; margin-top: 20px;">Frontend (React + TypeScript)</h4>
+                    <ul class="capabilities-list">
+                        <li><strong>Framework:</strong> React 18 with TypeScript for type-safe development</li>
+                        <li><strong>Build Tool:</strong> Vite for lightning-fast development and optimized production builds</li>
+                        <li><strong>UI Library:</strong> Material-UI (MUI) with custom theming and components</li>
+                        <li><strong>Routing:</strong> React Router v7 with role-based route protection</li>
+                        <li><strong>State Management:</strong> Context API for authentication and global state</li>
+                        <li><strong>Type Generation:</strong> Automated TypeScript type generation from OpenAPI schema</li>
+                        <li><strong>Data Grid:</strong> MUI X Data Grid for advanced table operations and data visualization</li>
+                    </ul>
+
+                    <h4>🛠️ DevOps & Infrastructure</h4>
+                    <div class="tech-stack-inline">
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">Docker Compose</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">MinIO</span>
+                        <span class="tech-badge">Nginx</span>
+                        <span class="tech-badge">Gunicorn</span>
+                        <span class="tech-badge">Makefile</span>
+                    </div>
+
+                    <h4>💼 My Development Process</h4>
+                    <ol class="process-list">
+                        <li><strong>Requirements Analysis:</strong> Worked with client to understand complex educational institution workflows and data requirements</li>
+                        <li><strong>Database Design:</strong> Designed normalized database schema with proper relationships and constraints for academic data</li>
+                        <li><strong>API Architecture:</strong> Implemented RESTful API with comprehensive endpoints following OpenAPI standards</li>
+                        <li><strong>Multi-Tenancy Implementation:</strong> Built custom middleware and managers for automatic institute-level data scoping</li>
+                        <li><strong>Frontend Development:</strong> Created responsive, user-friendly interface with role-based views and permissions</li>
+                        <li><strong>Type Safety:</strong> Implemented automated type generation pipeline ensuring frontend-backend consistency</li>
+                        <li><strong>Testing & Deployment:</strong> Set up development and production environments with Docker containerization</li>
+                    </ol>
+
+                    <h4>📊 Project Modules</h4>
+                    <ul class="use-cases">
+                        <li><strong>Accounts:</strong> User authentication, authorization, and profile management</li>
+                        <li><strong>Institutes:</strong> Organization-level configuration and settings</li>
+                        <li><strong>Students:</strong> Student enrollment, status tracking, custodian records</li>
+                        <li><strong>Employees:</strong> HR management, function assignments, career progression</li>
+                        <li><strong>Courses:</strong> Course catalog, class scheduling, instructor assignments</li>
+                        <li><strong>Terms:</strong> Academic year and term management</li>
+                        <li><strong>Finance:</strong> Account management, ledger entries, financial reporting</li>
+                    </ul>
+
+                    <h4>🚀 Technical Highlights</h4>
+                    <ul class="capabilities-list">
+                        <li><strong>Automated PIN Generation:</strong> Race-condition-free monotonic counter system for unique student/employee identifiers</li>
+                        <li><strong>Smart Account Management:</strong> Automatic account closure when employee exit dates arrive with startup hooks</li>
+                        <li><strong>Type-Safe Development:</strong> End-to-end TypeScript types auto-generated from backend schema</li>
+                        <li><strong>Scalable Architecture:</strong> Supports multiple institutes with complete data isolation</li>
+                        <li><strong>Developer Experience:</strong> Comprehensive Makefile commands for streamlined development workflow</li>
+                        <li><strong>API Documentation:</strong> Interactive Swagger/ReDoc interfaces for API exploration and testing</li>
+                    </ul>
+
+                    <h4>🔧 Tech Stack Summary</h4>
+                    <div class="tech-stack-inline">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Django</span>
+                        <span class="tech-badge">Django REST Framework</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Material-UI</span>
+                        <span class="tech-badge">Vite</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">JWT</span>
+                        <span class="tech-badge">OpenAPI</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">MinIO</span>
+                    </div>
+
+                    <div class="cta-section">
+                        <p style="margin-bottom: 20px; color: var(--text-secondary);">Need a similar enterprise-level management system for your organization? I specialize in building scalable, full-stack applications tailored to complex business requirements.</p>
+                        <button onclick="toggleContent('contact')" class="primary-cta">Discuss Your Project →</button>
                     </div>
                 </div>
             </div>
