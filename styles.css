@@ -5,22 +5,20 @@
 
 /* CSS Variables for Easy Customization */
 :root {
-    /* Cyberpunk Color Palette */
-    --bg-primary: #0a0e27;
-    --bg-secondary: #16213e;
-    --bg-terminal: #0f1419;
-    --accent-cyan: #00d9ff;
-    --accent-green: #00ff88;
-    --accent-pink: #ff2a6d;
-    --accent-yellow: #ffd60a;
+    /* Forest Green Palette — anchor: #1a560f */
+    --bg-primary:   #080e08;
+    --bg-secondary: #0f1a0f;
+    --bg-terminal:  #0b110b;
+    --accent-cyan:  #3dba2f;   /* primary accent — replaces teal */
+    --accent-green: #2a7a20;   /* dim/secondary accent */
     --text-primary: #e0e0e0;
     --text-secondary: #a0a0a0;
     --text-dim: #6b7280;
 
     /* Terminal Colors */
-    --terminal-border: #1f2937;
-    --terminal-shadow: rgba(0, 217, 255, 0.2);
-    --scanline-color: rgba(0, 217, 255, 0.05);
+    --terminal-border:  #1e3a1a;
+    --terminal-shadow:  rgba(61, 186, 47, 0.20);
+    --scanline-color:   rgba(61, 186, 47, 0.04);
 
     /* Fonts */
     --font-main: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
@@ -37,7 +35,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, var(--bg-primary) 0%, #0d1117 50%, var(--bg-secondary) 100%);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #090d09 50%, var(--bg-secondary) 100%);
     background-attachment: fixed;
     color: var(--text-primary);
     font-family: var(--font-main);
@@ -184,14 +182,14 @@ header {
     object-fit: cover;
     border: 4px solid var(--accent-cyan);
     box-shadow: 0 0 30px var(--terminal-shadow),
-                0 0 60px rgba(0, 217, 255, 0.3);
+                0 0 60px rgba(61, 186, 47, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-img:hover {
     transform: scale(1.05) rotate(2deg);
     box-shadow: 0 0 40px var(--terminal-shadow),
-                0 0 80px rgba(0, 217, 255, 0.4);
+                0 0 80px rgba(61, 186, 47, 0.4);
 }
 
 .profile-info {
@@ -208,10 +206,7 @@ header {
     text-align: center;
 }
 
-.section-icon {
-    margin-right: 10px;
-    font-size: 20px;
-}
+/* .section-icon removed — replaced by output-header left border */
 
 .title-text {
     color: var(--text-secondary);
@@ -270,6 +265,8 @@ header {
     border-radius: 8px;
     cursor: pointer;
     font-size: 15px;
+    letter-spacing: 0.05em;
+    min-width: 110px;
     font-family: var(--font-main);
     font-weight: 500;
     transition: all 0.3s ease;
@@ -280,15 +277,15 @@ header {
 .nav-btn:hover {
     border-color: var(--accent-cyan);
     color: var(--accent-cyan);
-    background: rgba(0, 217, 255, 0.1);
+    background: rgba(61, 186, 47, 0.1);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 217, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(61, 186, 47, 0.3);
 }
 
 .nav-btn.active {
     border-color: var(--accent-cyan);
     color: var(--accent-cyan);
-    background: rgba(0, 217, 255, 0.15);
+    background: rgba(61, 186, 47, 0.15);
 }
 
 /* ===========================
@@ -336,11 +333,14 @@ header {
 
 .output-header {
     color: var(--accent-cyan);
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 2px solid var(--terminal-border);
+    padding-left: 14px;
+    border-bottom: 1px solid var(--terminal-border);
+    border-left: 3px solid var(--accent-cyan);
     font-weight: 700;
+    letter-spacing: 0.04em;
 }
 
 .output-content {
@@ -359,11 +359,51 @@ header {
    SKILLS SECTION
    =========================== */
 
+/* Skill Legend */
+.skill-legend {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 14px 18px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--terminal-border);
+    border-radius: 8px;
+    margin-bottom: 28px;
+}
+
+.legend-comment {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: rgba(107, 114, 128, 0.8);
+    white-space: nowrap;
+    margin-right: 4px;
+}
+
+.legend-tiers {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.legend-tier {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-desc {
+    font-size: 11px;
+    color: var(--text-dim);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Skills grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
+    gap: 20px;
 }
 
 .skill-category {
@@ -371,58 +411,103 @@ header {
     padding: 20px;
     border-radius: 10px;
     border: 1px solid var(--terminal-border);
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-category:hover {
-    border-color: var(--accent-cyan);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
+    border-color: rgba(61, 186, 47, 0.35);
+    box-shadow: 0 6px 24px rgba(61, 186, 47, 0.08);
 }
 
 .skill-category h3 {
     color: var(--accent-cyan);
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 16px;
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--terminal-border);
 }
 
-.folder-icon {
-    font-size: 20px;
+/* .folder-icon removed — replaced by skill-category h3::before */
+.skill-category h3::before {
+    content: '▸';
+    color: var(--accent-green);
+    margin-right: 8px;
+    font-size: 13px;
 }
 
-.skill-item {
-    margin-bottom: 15px;
+.output-content h4::before {
+    content: '— ';
+    color: var(--accent-green);
+    font-weight: 400;
 }
 
-.skill-label {
+/* Skill rows */
+.skill-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.skill-name {
     color: var(--text-primary);
-    font-size: 15px;
-    margin-bottom: 8px;
-    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    flex: 1;
+    min-width: 0;
 }
 
-.skill-bar-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.skill-bar {
-    height: 8px;
-    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-green));
+/* Tier badges */
+.skill-tier {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 3px 9px;
     border-radius: 4px;
-    position: relative;
-    transition: width 0.8s ease;
-    box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+    white-space: nowrap;
+    font-family: 'Courier New', monospace;
+    flex-shrink: 0;
 }
 
-.skill-percent {
-    color: var(--text-dim);
-    font-size: 12px;
-    min-width: 40px;
+.tier-familiar {
+    color: rgba(156, 163, 175, 0.85);
+    background: rgba(107, 114, 128, 0.12);
+    border: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+.tier-proficient {
+    color: rgba(139, 148, 255, 0.95);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.35);
+}
+
+.tier-advanced {
+    color: rgba(61, 186, 47, 0.85);
+    background: rgba(61, 186, 47, 0.08);
+    border: 1px solid rgba(61, 186, 47, 0.3);
+}
+
+.tier-expert {
+    color: #3dba2f;
+    background: rgba(61, 186, 47, 0.15);
+    border: 1px solid rgba(61, 186, 47, 0.6);
+    box-shadow: 0 0 8px rgba(61, 186, 47, 0.2);
+    animation: expert-pulse 3s ease-in-out infinite;
+}
+
+@keyframes expert-pulse {
+    0%, 100% { box-shadow: 0 0 6px rgba(61, 186, 47, 0.2); }
+    50%       { box-shadow: 0 0 12px rgba(61, 186, 47, 0.45); }
 }
 
 /* ===========================
@@ -464,7 +549,7 @@ header {
 .project-card:hover {
     border-color: var(--accent-cyan);
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(0, 217, 255, 0.3);
+    box-shadow: 0 15px 40px rgba(61, 186, 47, 0.3);
 }
 
 .project-image {
@@ -483,7 +568,7 @@ header {
     height: 120px;
     object-fit: contain;
     transition: transform 0.3s ease;
-    filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.3));
+    filter: drop-shadow(0 0 10px rgba(61, 186, 47, 0.3));
 }
 
 .project-card:hover .project-image img {
@@ -516,18 +601,143 @@ header {
 }
 
 .tech-tag {
-    background: rgba(0, 217, 255, 0.1);
+    background: rgba(61, 186, 47, 0.1);
     color: var(--accent-cyan);
     padding: 5px 12px;
     border-radius: 6px;
     font-size: 12px;
-    border: 1px solid rgba(0, 217, 255, 0.3);
+    border: 1px solid rgba(61, 186, 47, 0.3);
     transition: all 0.2s ease;
 }
 
 .tech-tag:hover {
-    background: rgba(0, 217, 255, 0.2);
+    background: rgba(61, 186, 47, 0.2);
     border-color: var(--accent-cyan);
+}
+
+/* Screenshots Gallery */
+.screenshots-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 28px 0;
+}
+
+.screenshot-wide {
+    grid-column: 1 / -1;
+}
+
+.screenshot-item {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--terminal-border);
+    background: rgba(31, 41, 55, 0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.screenshot-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(61, 186, 47, 0.15);
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.screenshot-caption {
+    display: block;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: var(--text-dim);
+    font-family: 'Courier New', monospace;
+    border-top: 1px solid var(--terminal-border);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .screenshots-gallery {
+        grid-template-columns: 1fr;
+    }
+    .screenshot-wide {
+        grid-column: 1;
+    }
+}
+
+/* Game Era Divider */
+.game-era-divider {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 10px 0;
+}
+
+.game-era-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.4), transparent);
+}
+
+.game-era-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    background: rgba(168, 85, 247, 0.07);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+/* .game-era-icon removed — decorative flanking icons stripped */
+
+.game-era-text {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: rgba(168, 85, 247, 0.75);
+    letter-spacing: 0.5px;
+}
+
+.game-era-text strong {
+    color: rgba(192, 132, 252, 0.95);
+}
+
+.era-comment {
+    color: rgba(107, 114, 128, 0.9);
+    margin-right: 6px;
+}
+
+/* Game Dev project cards — subtle purple tint to differentiate from current work */
+.game-dev-card {
+    opacity: 0.82;
+    border-color: rgba(168, 85, 247, 0.25);
+}
+
+.game-dev-card:hover {
+    opacity: 1;
+    border-color: rgba(168, 85, 247, 0.7);
+    box-shadow: 0 15px 40px rgba(168, 85, 247, 0.2);
+    transform: translateY(-8px) scale(1.02);
+}
+
+.game-dev-card::after {
+    content: 'Click to view on GitHub →';
+}
+
+.tech-tag.game-tag {
+    background: rgba(168, 85, 247, 0.1);
+    color: rgba(192, 132, 252, 0.9);
+    border-color: rgba(168, 85, 247, 0.3);
+}
+
+.tech-tag.game-tag:hover {
+    background: rgba(168, 85, 247, 0.2);
+    border-color: rgba(168, 85, 247, 0.6);
 }
 
 .more-projects-notice {
@@ -578,18 +788,15 @@ header {
     border: none;
     cursor: pointer;
     font-family: var(--font-main);
-    box-shadow: 0 5px 20px rgba(0, 217, 255, 0.4);
+    box-shadow: 0 5px 20px rgba(61, 186, 47, 0.4);
 }
 
 .download-cv-btn:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(61, 186, 47, 0.6);
 }
 
-.btn-icon {
-    margin-right: 8px;
-    font-size: 18px;
-}
+/* .btn-icon removed — nav buttons are text-only */
 
 /* ===========================
    FOOTER
@@ -734,12 +941,21 @@ header {
 .service-card:hover {
     border-color: var(--accent-cyan);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(61, 186, 47, 0.3);
 }
 
 .service-icon {
-    font-size: 60px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-green);
+    font-family: var(--font-main);
     margin-bottom: 20px;
+    padding: 5px 10px;
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+    display: inline-block;
 }
 
 .service-card h3 {
@@ -781,7 +997,7 @@ header {
     text-align: center;
     margin-top: 50px;
     padding: 30px;
-    background: rgba(0, 217, 255, 0.05);
+    background: rgba(61, 186, 47, 0.05);
     border-radius: 8px;
     border: 1px solid var(--terminal-border);
 }
@@ -937,12 +1153,12 @@ header {
 }
 
 .tech-badge {
-    background: rgba(0, 217, 255, 0.1);
+    background: rgba(61, 186, 47, 0.1);
     color: var(--accent-cyan);
     padding: 8px 16px;
     border-radius: 6px;
     font-size: 13px;
-    border: 1px solid rgba(0, 217, 255, 0.3);
+    border: 1px solid rgba(61, 186, 47, 0.3);
     font-weight: 500;
 }
 
@@ -950,7 +1166,7 @@ header {
     text-align: center;
     margin-top: 40px;
     padding: 30px;
-    background: rgba(0, 217, 255, 0.05);
+    background: rgba(61, 186, 47, 0.05);
     border-radius: 8px;
 }
 
@@ -964,13 +1180,13 @@ header {
     border: none;
     cursor: pointer;
     font-family: var(--font-main);
-    box-shadow: 0 5px 20px rgba(0, 217, 255, 0.4);
+    box-shadow: 0 5px 20px rgba(61, 186, 47, 0.4);
     transition: all 0.3s ease;
 }
 
 .primary-cta:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(61, 186, 47, 0.6);
 }
 
 /* ===========================
@@ -1018,8 +1234,28 @@ header {
 }
 
 .contact-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.contact-brand-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+svg.contact-brand-icon {
+    color: var(--accent-green);
+    stroke: var(--accent-green);
+}
+
+.contact-method:hover .contact-brand-icon {
+    opacity: 1;
+    transform: scale(1.08);
 }
 
 .contact-info h4 {
@@ -1070,7 +1306,7 @@ header {
     text-align: center;
     margin-top: 40px;
     padding: 35px;
-    background: rgba(0, 217, 255, 0.05);
+    background: rgba(61, 186, 47, 0.05);
     border-radius: 12px;
     border: 2px solid var(--accent-cyan);
 }
@@ -1095,13 +1331,13 @@ header {
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 5px 20px rgba(0, 217, 255, 0.4);
+    box-shadow: 0 5px 20px rgba(61, 186, 47, 0.4);
     transition: all 0.3s ease;
 }
 
 .primary-cta-link:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(61, 186, 47, 0.6);
 }
 
 /* ===========================
@@ -1134,4 +1370,20 @@ a:focus {
 ::-moz-selection {
     background: var(--accent-cyan);
     color: var(--bg-terminal);
+}
+
+/* ===========================
+   DETAIL CARDS & SYSLENS
+   =========================== */
+
+/* Cards that navigate to a detail page rather than GitHub */
+.project-card.detail-card::after {
+    content: 'Click to view details →';
+}
+
+/* SysLens SVG icon — CSS filter tints it to match the green accent */
+.syslens-card-image img {
+    filter: brightness(0) saturate(100%) invert(55%) sepia(60%) saturate(500%) hue-rotate(78deg) brightness(115%);
+    width: 80px;
+    height: 80px;
 }
