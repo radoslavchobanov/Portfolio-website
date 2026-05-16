@@ -55,16 +55,19 @@ window.addEventListener('popstate', (e) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Respect deep-link hash, otherwise default to services
-    const initial = window.location.hash.slice(1) || 'services';
+    const hash = window.location.hash.slice(1);
+    const initial = hash || 'services';
     const initialEl = document.getElementById(initial);
 
     if (initialEl) {
+        document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
         initialEl.classList.add('active');
         updateActiveButton(initial);
     }
 
-    // Stamp the initial state so popstate has something to return to
-    history.replaceState({ section: initial }, '', '#' + initial);
+    // Only stamp a hash if one was already in the URL — adding #services when there
+    // was no hash causes Chrome to scroll the #services element into view.
+    history.replaceState({ section: initial }, '', hash ? '#' + initial : window.location.pathname);
 
     // Keyboard shortcuts 1–5
     document.addEventListener('keydown', (e) => {
@@ -75,14 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
 });
 
 console.log('%c Welcome to the Console!', 'color: #3dba2f; font-size: 16px; font-weight: bold;');

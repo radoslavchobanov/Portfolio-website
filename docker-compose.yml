@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: portfolio-website_web:latest
+    container_name: portfolio-website
+    ports:
+      - "9707:80"
+    restart: unless-stopped
